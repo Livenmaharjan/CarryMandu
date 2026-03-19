@@ -111,7 +111,6 @@ html, body, #root {
 }
 
 .bags-card {
-  opacity: 1;
   background-size: cover;
   background-position: center;
 }
@@ -154,4 +153,43 @@ html, body, #root {
 /* dropdown*/
 .dropdown{
   margin-left:4px;
+}
+
+/* login form */
+.login-form {
+  width: 400px;
+  height: 450px;
+  margin: 50px auto;
+  padding: 10px;
+  background-color: #ffffffc9;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+}
+.login-txt{
+  text-decoration: none; ;
+}
+.login-txt:hover {
+  color: white;
+}
+.login-form img{
+  vertical-align: middle;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #0d6dfded,#0b5dd7,#0b5dd7ca);
+  color: #fff !important;
+  border: none;
+  font-weight: 900;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(13,110,253,0.25);
+}
+
+.logs-txt{
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
 }

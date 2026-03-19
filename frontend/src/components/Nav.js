@@ -29,7 +29,12 @@ function Nav() {
         <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success" type="submit">Search</button>
-            <button className="btn btn-outline-primary ms-2" type="button">Login</button>
+            <Link className="login-txt" to="/login"> 
+            <button className="btn btn-outline-primary ms-2" type="button">
+            Login
+            </button>
+            </Link>
+
         </form>
         </div>
     </div>
