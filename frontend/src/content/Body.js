@@ -1,17 +1,18 @@
 
+import { useEffect,useState } from "react";
 import {useNavigate} from "react-router-dom"
 
 function Body() {
     const navigate = useNavigate();
+    const [products, setProducts] = useState([]);
     const user = {login: false};
 
-    const products = [
-        { id: 1, name: "Crumpled Wallet", image: "./images/s.png", price: "2000" },
-        { id: 2, name: "Crumpled Wallet 2", image: "./images/s.png", price: "2000" },       
-        { id: 3, name: "Crumpled Wallet 3", image: "./images/s.png", price: "2000" },
-        { id: 4, name: "Crumpled Wallet 4", image: "./images/s.png", price: "2000" }
-
-    ];
+    useEffect(() => {
+        fetch("http://localhost:9000/testAPI")
+          .then(res => res.json())
+          .then(res => setProducts(res))
+          .catch(err => console.log(err));
+      }, []);
 
     const handleBuy = () =>{
         if(user.login){
@@ -41,6 +42,7 @@ function Body() {
     ))} 
         </div>
     </div>
+
     );
 }
 

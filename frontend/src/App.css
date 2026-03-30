@@ -7,6 +7,13 @@ html, body, #root {
   font-size: 0.8rem;
 }
 
+/*Title*/
+.navbar-brand{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+}
+
+
 /* card */
 
 .card{
@@ -45,12 +52,23 @@ html, body, #root {
 }
 
 .custom-img {
-  height: 220px;
+  height: 240px;
   object-fit: cover;
 }
-.card-flex-container {
-  justify-content: center; 
+
+.cards-flex-container {
+  gap: 20px;
+  align-items: center;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap ;
+}
+
 
 .custom-img {
   height: inherit;
@@ -101,6 +119,14 @@ html, body, #root {
   color: inherit;
 }
 
+.category-card{
+  display: flex;
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  ;}
+
 .category-card::before {
   content: "";
   position: absolute;
@@ -110,25 +136,44 @@ html, body, #root {
 
 }
 
-.bags-card {
-  background-size: cover;
-  background-position: center;
+.category-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
 }
 
+.bags-card {
+  background-color: red;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+
 .bags-card:hover {
+  transform: scale(1);
   transform: scale(1.02);
-  opacity: blur(20%);
+  box-shadow: 2px 8px 20px rgba(3, 0, 0, 0.704);
 }
 
 .wallets-card {
   opacity: 1; 
+  display: flex;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .wallets-card:hover {
+  transform: scale(1.00);
   transform: scale(1.02);
-  opacity: blur(20%);
+  box-shadow: 2px 8px 20px rgba(3, 0, 0, 0.704);
+
 }
 
 /* category btnn */
@@ -192,4 +237,14 @@ html, body, #root {
 .logs-txt{
   font-weight: 600;
   font-family: 'Times New Roman', Times, serif;
+}
+
+.footer{
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ background-color: rgba(5, 5, 5, 0.849);
+ color: white;
+ text-align: center;
+ height: 40px;
 }

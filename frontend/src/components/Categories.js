@@ -1,21 +1,26 @@
 import { Link } from "react-router-dom";
-
+import "../App.css";
 function Categories() {
     return (
         <div className="container mt-4">
             <h4>Categories</h4>
 
-            <div className="category-container">
-            <ul className=""></ul>
-            <div className="card category-card bags-card" style={{backgroundImage: "url(/images/bag.jpg)"}}><button className="cat-btn">
-                <Link to="/bag" className="category-link">Bags
-                </Link></button></div>
-            <div className="card category-card wallets-card" style={{backgroundImage: "url(/images/s.png)"}}><button className="cat-btn">
-                <Link to="/wallets" className="category-link">Wallets
-                </Link></button></div>
-            </div>
-        </div>
+        <div className="flex-container mt-3">
 
+            <Link to="/bag" className="category-link">
+            <div className="card category-card bags-card " style={{ backgroundImage: "url(/images/bag2.jpg)" }}>
+            <p className="category-text"></p>
+            </div>
+            </Link>
+            
+            <Link to="/wallets" className="category-link">
+            <div className="card category-card wallets-card" style={{backgroundImage:"url(/images/wallets.png)"}}>
+            <p className="category-text"></p>
+            </div>
+            </Link>
+        </div>
+        </div>
+            
     );
 
 }
